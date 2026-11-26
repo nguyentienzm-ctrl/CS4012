@@ -1,0 +1,296 @@
+/* =========================================================
+   1. GLOBAL BASE STYLES & RESET
+   ========================================================= */
+* {
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Wrapper to limit maximum width and center page content */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #1a365d;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Reusable primary button styles */
+.btn-primary {
+    display: inline-block;
+    background-color: #b45309;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #92400e;
+}
+
+/* =========================================================
+   2. HEADER & NAVIGATION (Flexbox)
+   ========================================================= */
+.site-header {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 18px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Align logo to the left and navigation menu to the right */
+    align-items: center;
+}
+
+.brand-logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 24px; /* Spacing between navigation items */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   3. HERO SECTION (Background image + Left-aligned text box)
+   ========================================================= */
+.hero-section {
+    background-image: url("image/.jpg");
+    background-color: #334155; /* Fallback background color if the image fails to load */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 550px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for high text contrast */
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* =========================================================
+   4. ABOUT US SECTION (Two-column layout: image left, text right via Flexbox)
+   ========================================================= */
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image,
+.about-text {
+    flex: 1; /* Divide available width equally (50% each) */
+}
+
+.about-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover; /* Crop image proportionally without distortion */
+    border-radius: 8px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #1a365d;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #444444;
+}
+
+/* =========================================================
+   5. TOP DESTINATIONS SECTION (Two destination cards side by side via Flexbox)
+   ========================================================= */
+.destinations-section {
+    background-color: #f4f6f8;
+}
+
+.destinations-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.destination-card {
+    flex: 1; /* Give each destination card equal width (50% each) */
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-size: 22px;
+    color: #1a365d;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.card-link {
+    color: #b45309;
+    font-weight: bold;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   6. CONTACT US SECTION (Centered contact form)
+   ========================================================= */
+.contact-container {
+    max-width: 650px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    background-color: #f4f6f8;
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #1a365d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* =========================================================
+   7. FOOTER
+   ========================================================= */
+.site-footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 25px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   8. RESPONSIVE DESIGN FOR MOBILE (Below 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    /* Stack all horizontal Flexbox layouts vertically into a single column */
+    .header-container,
+    .about-grid,
+    .destinations-grid,
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+}
