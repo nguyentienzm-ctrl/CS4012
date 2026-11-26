@@ -2,9 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Required to enable responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Travel Guide featuring curated destinations in Australia and Germany.">
+    <title>... Guide | Explore the World</title>
+    <!-- Link external CSS stylesheet using a relative path -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- =========================================================
+     HEADER & NAVIGATION: Shared navigation bar across all pages
+     ========================================================= -->
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="brand-logo">... Guide</a>
+        <nav class="main-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#destinations" class="nav-link">Top Destinations</a></li>
+                <li><a href="australia.html" class="nav-link">Australia</a></li>
+                <li><a href="germany.html" class="nav-link">Germany</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main content of the homepage -->
+<main>
+
+    <!-- =========================================================
+         HERO SECTION: Full-width background image with headline and CTA button
+         ========================================================= -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Explore the World With Us</h1>
+                <p>Discover curated travel guides, cultural highlights, and practical itineraries across two extraordinary countries.</p>
+                <a href="#destinations" class="btn-primary">Discover Top Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         ABOUT US SECTION: Two-column layout (image on the left, text on the right)
+         ========================================================= -->
+    <section id="about" class="section-padding about-section">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="image/.jpg" alt="Travelers overlooking a mountain valley during sunrise">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>We are a team of three travel enthusiasts dedicated to documenting authentic local experiences, iconic landmarks, and hidden gems around the globe.</p>
+                <p>Whether you are planning an urban getaway in Europe or a coastal road trip in Oceania, our guides provide verified insights to help you travel with confidence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         TOP DESTINATIONS SECTION: Two-column layout linking to destination pages
+         ========================================================= -->
+    <section id="destinations" class="section-padding destinations-section">
+        <div class="container">
+            <h2 class="section-title">Top Destinations</h2>
+            <div class="destinations-grid">
+
+                <!-- Destination Card 1: Australia -->
+                <article class="destination-card">
+                    <img src="image/.jpg" alt="Sydney Opera House and harbor waterfront in Australia">
+                    <div class="card-body">
+                        <h3>Australia</h3>
+                        <p>Experience vibrant coastal cities, the Great Barrier Reef, and vast outback landscapes.</p>
+                        <a href="australia.html" class="card-link">Explore Australia Guide</a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 2: Germany -->
+                <article class="destination-card">
+                    <img src="image/.jpg" alt="Historic Bavarian castle surrounded by alpine forest in Germany">
+                    <div class="card-body">
+                        <h3>Germany</h3>
+                        <p>Step into centuries of European history, fairy-tale castles, and modern cultural hubs.</p>
+                        <a href="germany.html" class="card-link">Explore Germany Guide</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT US SECTION: Contact form for user inquiries
+         ========================================================= -->
+    <section id="contact" class="section-padding contact-section">
+        <div class="container contact-container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Have a question about our travel guides or want to suggest a destination? Send us a message.</p>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination-interest">Destination of Interest</label>
+                    <select id="destination-interest" name="destination-interest">
+                        <option value="general">General Inquiry</option>
+                        <option value="australia">Australia</option>
+                        <option value="germany">Germany</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER: Copyright notice and quick navigation links
+     ========================================================= -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <p>&copy; 2026 ... Travel Guide | CS4012 Group Project.</p>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="australia.html">Australia</a></li>
+            <li><a href="germany.html">Germany</a></li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
